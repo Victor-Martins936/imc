@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Índice de Massa Corporal</title>
+</head>
+<body>
+
+    <header>
+        <h1> IMC - Índice de Massa Corporal</h1>
+    </header>
+
+    <label for="altura"  class="alturaL">Altura</label>
+    <input type="number" name="" id="altura"  class="altura"> 
+    <br>
+
+    <input type="number" name="" id="peso" class="peso">
+    <label for="peso" class="pesoL">Peso (Kg)</label>
+    <br>
+
+    <button onclick="calcularImc()">Calcular</button>
+
+    <p>Seu Índice de massa corporal é: <br> <span id="resultado"></span></p>
+
+    <img src="https://cdn-icons-png.flaticon.com/512/1557/1557902.png" alt="" class="alturaimg">
+
+    <img src="https://cdn-icons-png.flaticon.com/512/76/76724.png" alt="" class="pesoimg">
+
+    <script>
+        function calcularImc() {
+            const altura = document.getElementById('altura').value;
+            const peso = document.getElementById('peso').value;
+            const imc = peso / (altura ** 2);
+            
+            document.getElementById('resultado').textContent = imc.toFixed(2);
+
+            
+        }
+    </script>
+
+    <footer>Feito Por Vitor Oliveira Martins &copy;</footer>
+    
+</body>
+</html>
